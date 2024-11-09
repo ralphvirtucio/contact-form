@@ -15,38 +15,61 @@
   </style>
 </head>
 <body>
+  <main>
+    <h1 class="visually-hidden">Contact Us Form</h1>
+    <form action="#">
+      <fieldset>
+        <legend>Contact Us</legend>
 
-  Contact Us
+        <div>
+          <label for="first_name">First Name <span aria-hidden="true" class="required">*</span></label>
+          <input type="text" id="first_name" name="first_name" aria-invalid="true" aria-describedby="first_name-error" required>
+          <span id="first_name-error">This field is required</span>
+        </div>
 
-  First Name
-  This field is required
+        <div>
+          <label for="last_name">Last Name <span aria-hidden="true" class="required">*</span></label>
+          <input type="text" id="last_name" name="last_name" aria-invalid="true" aria-describedby="last_name-error" required>
+          <span id="last_name-error">This field is required</span>
+        </div>
 
-  Last Name
-  This field is required
+        <div>
+          <label for="email">Email <span aria-hidden="true" class="required">*</span></label>
+          <input type="email" id="email" name="email" aria-invalid="true" aria-describedby="email-error" required>
+          <span id="email-error">Please enter a valid email address</span>
+        </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+        <fieldset >
+          <legend>Query Type <span class="required" aria-hidden="true">*</span></legend>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+          <div>
+            <input type="radio" name="query" id="gen_enquiry" value="General Enquiry" aria-describedby="query-error">
+            <label for="gen_enquiry">General Enquiry</label>
+          </div>
 
-  Message
-  This field is required
+          <div>
+            <input type="radio" name="query" id="support_req" value="Support Request" aria-describedby="query-error">
+            <label for="support_req">Support Request</label>
+          </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+          <span id="query-error">Please select a query type</span>
+        </fieldset>
 
-  Submit
+        <div>
+          <label for="message">Message <span aria-hidden="true" class="required">*</span></label>
+          <textarea name="message" id="message" aria-describedby="message-error" aria-invalid="true" required></textarea>
+          <span id="message-error">This field is required</span>
+        </div>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div>
+          <input type="checkbox" name="consent" id="consent" aria-describedby="consent-error" aria-invalid="true" required>
+          <label for="consent">I consent to being contacted by the team <span aria-hidden="true" class="required">*</span></label>
+          <span id="consent-error">To submit this form, please consent to being contacted</span>
+        </div>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
 </body>
 </html>
